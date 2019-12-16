@@ -1,0 +1,104 @@
+﻿@model BizTalk.ESBPortal.Reader.Message
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Message</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NativeMessageID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NativeMessageID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FaultID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FaultID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ContentType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ContentType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MessageName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MessageName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.InterchangeID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.InterchangeID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RoutingUrl)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RoutingUrl)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ResubmitAttempted)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ResubmitAttempted)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ResubmitSuccessful)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ResubmitSuccessful)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.InsertedDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.InsertedDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ActivityID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ActivityID)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

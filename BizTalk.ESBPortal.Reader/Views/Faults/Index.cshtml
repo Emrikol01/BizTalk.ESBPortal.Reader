@@ -1,0 +1,165 @@
+﻿@model IEnumerable<BizTalk.ESBPortal.Reader.Fault>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.NativeMessageID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ActivityID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Application)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ErrorType)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FailureCategory)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FaultCode)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FaultDescription)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FaultSeverity)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Scope)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ServiceInstanceID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ServiceName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FaultGenerator)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MachineName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DateTime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ExceptionMessage)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ExceptionType)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ExceptionSource)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ExceptionTargetSite)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ExceptionStackTrace)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.InnerExceptionMessage)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.InsertMessagesFlag)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.InsertedDate)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.NativeMessageID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ActivityID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Application)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ErrorType)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FailureCategory)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FaultCode)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FaultDescription)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FaultSeverity)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Scope)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ServiceInstanceID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ServiceName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FaultGenerator)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MachineName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DateTime)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ExceptionMessage)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ExceptionType)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ExceptionSource)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ExceptionTargetSite)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ExceptionStackTrace)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.InnerExceptionMessage)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.InsertMessagesFlag)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.InsertedDate)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.FaultID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.FaultID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.FaultID })
+        </td>
+    </tr>
+}
+
+</table>

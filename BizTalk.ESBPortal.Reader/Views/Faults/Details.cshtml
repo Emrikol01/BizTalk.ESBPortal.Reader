@@ -1,0 +1,202 @@
+﻿@model BizTalk.ESBPortal.Reader.Fault
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Fault</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NativeMessageID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NativeMessageID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ActivityID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ActivityID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Application)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Application)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ErrorType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ErrorType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FailureCategory)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FailureCategory)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FaultCode)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FaultCode)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FaultDescription)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FaultDescription)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FaultSeverity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FaultSeverity)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Scope)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Scope)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ServiceInstanceID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ServiceInstanceID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ServiceName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ServiceName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FaultGenerator)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FaultGenerator)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MachineName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MachineName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateTime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ExceptionMessage)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ExceptionMessage)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ExceptionType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ExceptionType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ExceptionSource)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ExceptionSource)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ExceptionTargetSite)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ExceptionTargetSite)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ExceptionStackTrace)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ExceptionStackTrace)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.InnerExceptionMessage)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.InnerExceptionMessage)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.InsertMessagesFlag)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.InsertMessagesFlag)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.InsertedDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.InsertedDate)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.FaultID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

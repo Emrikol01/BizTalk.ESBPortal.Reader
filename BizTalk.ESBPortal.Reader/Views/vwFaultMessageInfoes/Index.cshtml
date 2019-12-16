@@ -1,0 +1,99 @@
+﻿@model IEnumerable<BizTalk.ESBPortal.Reader.vwFaultMessageInfo>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.InterchangeID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RoutingUrl)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MsgInsertDate)
+        </th>
+        @*<th>
+            @Html.DisplayNameFor(model => model.ActivityID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NativeMessageID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FaultDescription)
+        </th>*@
+        <th>
+            @Html.DisplayNameFor(model => model.FaultSeverity)
+        @*</th>
+        <th>
+            @Html.DisplayNameFor(model => model.FaultGenerator)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MachineName)
+        </th>*@
+        <th>
+            @Html.DisplayNameFor(model => model.DateTime)
+        </th>
+        @*<th>
+            @Html.DisplayNameFor(model => model.InsertMessagesFlag)
+        </th>*@
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.InterchangeID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RoutingUrl)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MsgInsertDate)
+        </td>
+        @*<td>
+            @Html.DisplayFor(modelItem => item.ActivityID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NativeMessageID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FaultDescription)
+        </td>*@
+        <td>
+            @Html.DisplayFor(modelItem => item.FaultSeverity)
+        </td>
+        @*<td>
+            @Html.DisplayFor(modelItem => item.FaultGenerator)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MachineName)
+        </td>*@
+        <td>
+            @Html.DisplayFor(modelItem => item.DateTime)
+        </td>
+        @*<td>
+            @Html.DisplayFor(modelItem => item.InsertMessagesFlag)
+        </td>*@
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { id = item.MessageID /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new {  /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
+
+</table>

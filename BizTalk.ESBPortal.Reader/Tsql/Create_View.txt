@@ -1,0 +1,44 @@
+﻿-- this view is needed to support the Model vwFaultMessageInfo and entity framework
+
+USE [EsbExceptionDb]
+GO
+
+create view [dbo].[vwFaultMessageInfo]
+as
+select m.MessageID
+, f.FaultID
+, ContentType
+, MessageName
+, InterchangeID
+, RoutingUrl
+, ResubmitAttempted
+, ResubmitSuccessful
+, m.InsertedDate as MsgInsertDate
+, m.ActivityID
+, m.NativeMessageID
+, [Application]
+, [Description]
+, ErrorType
+, FailureCategory
+, FaultCode
+, FaultDescription
+, FaultSeverity
+, Scope
+, ServiceInstanceID
+, ServiceName
+, FaultGenerator
+, MachineName
+, [DateTime]
+, ExceptionMessage
+, ExceptionType
+, ExceptionSource
+, ExceptionTargetSite
+, ExceptionStackTrace
+, InnerExceptionMessage
+, InsertMessagesFlag
+, f.InsertedDate as FaultInsertDate
+, MessageData
+from [dbo].[Message] m 
+	inner join Fault f on m.FaultID = f.FaultID
+	inner join MessageData md on md.MessageID = m.MessageID
+GO
